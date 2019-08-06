@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter - Stellar by HTML5 UP",
-    author: "Hunter Chang",
-    description: "A Gatsby.js Starter based on Stellar by HTML5 UP"
+    title: "The Children's Garden - A Montessori School",
+    author: "Matthew Tetrault",
+    description: "A Montessori School in Kokomo, Indiana"
   },
   plugins: [
     'gatsby-plugin-react-helmet',

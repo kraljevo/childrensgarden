@@ -92,11 +92,11 @@
 				box-shadow: none;
 
 				&:hover {
-					background-color: lighten(_palette(accent), 3);
+					background-color: lighten(_palette(accent), 15);
 				}
 
 				&:active {
-					background-color: darken(_palette(accent), 3);
+					background-color: darken(_palette(accent), 15);
 				}
 
 				&.icon {

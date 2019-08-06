@@ -1,36 +1,31 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import logo from '../assets/images/logo.svg';
-
 const Footer = (props) => (
     <footer id="footer">
         <section>
-            <h2>Aliquam sed mauris</h2>
-            <p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+            <p>You are welcome to tour our school by appointment.</p>
+            <p>We welcome students of any race, gender, religion, nationality or ethnic origin.</p>
             <ul className="actions">
-                <li><Link to="/generic" className="button">Learn More</Link></li>
+                <li><Link to="/about" className="button">Learn More</Link></li>
             </ul>
         </section>
         <section>
-            <h2>Etiam feugiat</h2>
+            <h2>Contact</h2>
             <dl className="alt">
                 <dt>Address</dt>
-                <dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+                <dd><a href="https://www.google.com/maps/place/1206+S+Dixon+Rd,+Kokomo,+IN+46902/@40.4723507,-86.1658597,17z/data=!3m1!4b1!4m5!3m4!1s0x881484125e472649:0xf4c12bf7c5bf1809!8m2!3d40.4723466!4d-86.163671">1206 South Dixon Road &bull; Kokomo, IN 46902</a></dd>
                 <dt>Phone</dt>
-                <dd>(000) 000-0000 x 0000</dd>
+                <dd><a href="tel: 765-452-1152">(765) 452-1152</a></dd>
                 <dt>Email</dt>
-                <dd><a href="#">information@untitled.tld</a></dd>
+                <dd><a href="mailto: teacherjan@tcg-kokomo.org">teacherjan@tcg-kokomo.org</a></dd>
             </dl>
             <ul className="icons">
-                <li><a href="#" className="icon fa-twitter alt"><span className="label">Twitter</span></a></li>
-                <li><a href="#" className="icon fa-facebook alt"><span className="label">Facebook</span></a></li>
-                <li><a href="#" className="icon fa-instagram alt"><span className="label">Instagram</span></a></li>
-                <li><a href="#" className="icon fa-github alt"><span className="label">GitHub</span></a></li>
-                <li><a href="#" className="icon fa-dribbble alt"><span className="label">Dribbble</span></a></li>
+                <li>Find us on Facebook</li>
+                <li><a href="https://www.facebook.com/tcgkokomo/" className="icon fa-facebook alt"><span className="label">Facebook</span></a></li>
             </ul>
         </section>
-        <p className="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+        <p className="copyright">&copy; The Children's Garden. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
     </footer>
 )
 
