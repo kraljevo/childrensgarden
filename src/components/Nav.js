@@ -13,8 +13,13 @@ const Nav = (props) => (
             <li>
                 <a href="/staff">Staff</a>
             </li>
-            <li>
+            <li className="dropdown">
                 <a href="/programs">Programs</a>
+                <div class="dropdown-content">
+                    <a href="/primary">Primary Class</a>
+                    <a href="/encrichment">Enrichment</a>
+                    <a href="/summer">Summer Program</a>
+                </div>
             </li>
             <li>
                 <a href="/contact">Contact</a>
