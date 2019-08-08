@@ -63,12 +63,6 @@
 					// 	box-shadow: none;
 					// }
 				}
-				&.is-active {
-					a {
-						background-color: _palette(invert, bg);
-						box-shadow: none;
-					}
-				}
 			}
 		}
 
@@ -126,5 +120,13 @@
 		
 		.dropdown:hover .dropdown-content {
 			display: block;
+		}
+
+		.is-active {
+			background-color: _palette(bg);
+			color: #ffffff;
+			border: 1px solid _palette(bg);
+			border-radius: 5px;
+			box-shadow: none;
 		}
 	}

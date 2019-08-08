@@ -1,12 +1,12 @@
 import React from 'react'
 import Nav from '../components/Nav.js'
 import Waypoint from 'react-waypoint'
+import HeaderPrograms from '../components/HeaderPrograms'
+import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import HeaderStaff from '../components/HeaderStaff'
-import pic02 from '../assets/images/pic02.jpg'
 
-class Staff extends React.Component {
+class Programs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,7 +27,7 @@ class Staff extends React.Component {
     return (
       <Layout>
 
-        <HeaderStaff />
+        <HeaderPrograms />
 
         <Waypoint
           onEnter={this._handleWaypointEnter}
@@ -35,12 +35,15 @@ class Staff extends React.Component {
         >
         </Waypoint>
         
+
         <Nav sticky={this.state.stickyNav} />
 
         <div id="main">
           <section id="content" className="main">
-            <span className="image left"><img src={pic02} alt="" /></span>
-            <p>Janice L. Harp received Montessori training and certification through the Association Montessori Internationale (AMI). Since 1985, Mrs. Harp has directed classes in Georgia, Michigan and Indiana at AMI recognized schools. She is dedicated to creating an atmosphere of calm, order and joy while striving to meet the developmental needs of each child in her class. Mrs. Harp serves as administrator and primary class teacher of the school. She lives in Kokomo with her husband Ray.</p>
+            <h2>Select a program to learn more.</h2>
+            <Link to="/programs/primary" activeClassName="is-active">Primary Class</Link><br />
+            <Link to="/programs/encrichment" activeClassName="is-active">Enrichment</Link><br />
+            <Link to="/programs/summer" activeClassName="is-active">Summer Program</Link>
           </section>
         </div>
 
@@ -49,4 +52,4 @@ class Staff extends React.Component {
   }
 }
 
-export default Staff
+export default Programs

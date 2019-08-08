@@ -1,28 +1,32 @@
 import React from 'react'
 import Scrollspy from 'react-scrollspy'
+import { Link } from 'gatsby'
 
 const Nav = (props) => (
     <nav id="nav" className={props.sticky ? 'alt' : ''}>
-        <Scrollspy items={ ['intro', 'first', 'second', 'cta'] } currentClassName="is-active" offset={-300}>
+        <Scrollspy items={ ['intro', 'first', 'second', 'cta'] } offset={-300}>
             <li>
-                <a href="/">Home</a>
+                <Link to="/" activeClassName="is-active">Home</Link>
             </li>
             <li>
-                <a href="/about">About</a>
+                <Link to="/about" activeClassName="is-active">About</Link>
             </li>
             <li>
-                <a href="/staff">Staff</a>
+                <Link to="/staff" activeClassName="is-active">Staff</Link>
             </li>
             <li className="dropdown">
-                <a href="/programs">Programs</a>
+                <Link to="/programs" activeClassName="is-active" partiallyActive={true}>Programs</Link>
                 <div class="dropdown-content">
-                    <a href="/primary">Primary Class</a>
-                    <a href="/encrichment">Enrichment</a>
-                    <a href="/summer">Summer Program</a>
+                    <Link to="/programs/primary" activeClassName="is-active">Primary Class</Link>
+                    <Link to="/programs/enrichment" activeClassName="is-active">Enrichment</Link>
+                    <Link to="/programs/summer" activeClassName="is-active">Summer Program</Link>
                 </div>
             </li>
             <li>
-                <a href="/contact">Contact</a>
+                <Link to="/admissions" activeClassName="is-active">Admissions</Link>
+            </li>
+            <li>
+                <Link to="/contact" activeClassName="is-active">Contact</Link>
             </li>
         </Scrollspy>
     </nav>
