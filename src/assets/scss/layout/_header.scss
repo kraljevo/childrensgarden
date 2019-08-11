@@ -67,6 +67,7 @@
 
 		@include breakpoint(small) {
 			@include padding(3em, 2em, (0, 0, -1em, 0));
+			padding-top: 120px !important;
 
 			p {
 				font-size: 1em;
@@ -88,6 +89,7 @@
 
 		@include breakpoint(xsmall) {
 			@include padding(3em, 1.5em, (0, 0, -1em, 0));
+			padding-top: 120px !important;
 
 			&.alt {
 				@include padding(3em, 1.5em, (1em, 0, 0, 0));
@@ -96,6 +98,7 @@
 
 		@include breakpoint(xxsmall) {
 			@include padding(2.5em, 1em, (0, 0, -1em, 0));
+			padding-top: 120px !important;
 
 			&.alt {
 				@include padding(2.5em, 1em, (1em, 0, 0, 0));

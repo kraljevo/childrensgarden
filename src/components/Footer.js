@@ -25,7 +25,7 @@ const Footer = (props) => (
                 <li><a href="https://www.facebook.com/tcgkokomo/" className="icon fa-facebook alt"><span className="label">Facebook</span></a></li>
             </ul>
         </section>
-        <p className="copyright">&copy; The Children's Garden. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+        <p className="copyright">&copy; The Children's Garden.</p>
     </footer>
 )
 

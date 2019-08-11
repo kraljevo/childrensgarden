@@ -60,6 +60,7 @@
 		@include breakpoint(small) {
 			> .main {
 				@include padding(3em, 2em);
+				width: 100%;
 
 				> .image.main:first-child {
 					margin: -3em 0 2em -2em;

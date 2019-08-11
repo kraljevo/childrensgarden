@@ -5,12 +5,16 @@ import HeaderPrograms from '../components/HeaderPrograms'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
+import Sidebar from '../components/Sidebar';
+import NavMobile from '../components/NavMobile';
+import Backdrop from '../components/Backdrop';
 
 class Programs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      stickyNav: false
+      stickyNav: false,
+      sidebarState: 'closed'
     }
   }
 
@@ -20,6 +24,18 @@ class Programs extends React.Component {
 
   _handleWaypointLeave = () => {
     this.setState(() => ({ stickyNav: true }));
+  }
+
+  _closeSidebar = () => {
+    this.setState(() => ({ 
+      sidebarState: 'closed'
+    }))
+  }
+  
+  _openSidebar = () => {
+    this.setState(() => ({ 
+      sidebarState: 'open'
+    }))
   }
 
   render() {
@@ -34,7 +50,17 @@ class Programs extends React.Component {
           onLeave={this._handleWaypointLeave}
         >
         </Waypoint>
-        
+
+        <NavMobile
+          open={this._openSidebar}
+        />
+
+        <Sidebar status={this.state.sidebarState}/>
+
+        <Backdrop
+          close={this._closeSidebar}
+          status={this.state.sidebarState}
+        />
 
         <Nav sticky={this.state.stickyNav} />
 
@@ -42,7 +68,7 @@ class Programs extends React.Component {
           <section id="content" className="main">
             <h2>Select a program to learn more.</h2>
             <Link to="/programs/primary" activeClassName="is-active">Primary Class</Link><br />
-            <Link to="/programs/encrichment" activeClassName="is-active">Enrichment</Link><br />
+            <Link to="/programs/enrichment" activeClassName="is-active">Enrichment</Link><br />
             <Link to="/programs/summer" activeClassName="is-active">Summer Program</Link>
           </section>
         </div>

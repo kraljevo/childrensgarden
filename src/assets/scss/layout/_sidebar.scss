@@ -1,0 +1,111 @@
+///
+/// Stellar by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Sidebar */
+
+    #sidebar {
+        @include vendor('transition', (
+            'background-color #{_duration(transition)} ease',
+            'border-top-left-radius #{_duration(transition)} ease',
+            'border-top-right-radius #{_duration(transition)} ease',
+            'padding #{_duration(transition)} ease',
+        ));
+        @include color-typography(invert);
+        position: fixed;
+        top: 60px;
+        width: 70vw;
+        height: 100%;
+        padding: 0 1em;
+        background-color: transparentize(_palette(invert, bg-alt), 0.05);
+        -webkit-box-shadow: 6px 10px 5px 0px rgba(0,0,0,0.35);
+        -moz-box-shadow: 6px 10px 5px 0px rgba(0,0,0,0.35);
+        box-shadow: 6px 10px 5px 0px rgba(0,0,0,0.35);
+        cursor: default;
+        text-align: left;
+        font-size: 1.5em;
+        z-index: _misc(z-index-base);
+
+        &.closed {
+            display: none;
+            left: -100%;
+        }
+
+        &.open {
+            display: block;
+            left: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+            margin: 4em 0;
+
+            li {
+                @include vendor('transition', (
+                    'margin #{_duration(transition)} ease'
+                ));
+                display: block;
+                margin: 0 0.35em;
+                padding: 0 0.5em;
+
+                a {
+                    @include vendor('transition', (
+                        'font-size #{_duration(transition)} ease'
+                    ));
+                    display: inline-block;
+                    height: 2.25em;
+                    line-height: 2.25em;
+                    padding: 0 1.25em;
+                    border: 0;
+                    border-radius: _size(border-radius);
+                    box-shadow: inset 0 0 0 1px transparent;
+                }
+            }
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            z-index: _misc(z-index-base);
+        }
+        
+        .dropdown-content a {
+            padding: auto 16px;
+            text-decoration: none;
+            height: auto;
+            line-height: 1.5em;
+            margin: 0.5em 0;
+            padding: 0.5em 0;
+            display: block;
+            text-align: center;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .is-active {
+            background-color: _palette(bg);
+            color: #ffffff;
+            border: 1px solid _palette(bg);
+            border-radius: 5px;
+            box-shadow: none;
+        }
+
+        @include breakpoint(small) {
+            & + #main {
+                padding-top: 0;
+            }
+        }
+    }

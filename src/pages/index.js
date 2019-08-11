@@ -7,12 +7,17 @@ import Header from '../components/Header'
 import Nav from '../components/Nav'
 import pic01 from '../assets/images/pic01.jpg'
 import pic04 from '../assets/images/pic04.jpg'
+import Sidebar from '../components/Sidebar';
+import NavMobile from '../components/NavMobile';
+import Backdrop from '../components/Backdrop';
+
 
 class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      stickyNav: false
+      stickyNav: false,
+      sidebarState: 'closed'
     }
   }
 
@@ -24,13 +29,25 @@ class Index extends React.Component {
     this.setState(() => ({ stickyNav: true }));
   }
 
+  _closeSidebar = () => {
+    this.setState(() => ({ 
+      sidebarState: 'closed'
+    }))
+  }
+  
+  _openSidebar = () => {
+    this.setState(() => ({ 
+      sidebarState: 'open'
+    }))
+  }
+
   render() {
 
     return (
       <Layout>
         <Helmet title="The Children's Garden" />
 
-        <Header />
+        <Header onClick={this._closeSidebar} />
         
         <Waypoint
           onEnter={this._handleWaypointEnter}
@@ -38,6 +55,17 @@ class Index extends React.Component {
         >
         </Waypoint>
 
+        <NavMobile
+          open={this._openSidebar}
+        />
+
+        <Sidebar status={this.state.sidebarState}/>
+
+        <Backdrop
+          close={this._closeSidebar}
+          status={this.state.sidebarState}
+        />
+        
         <Nav sticky={this.state.stickyNav} />
 
         <div id="main">

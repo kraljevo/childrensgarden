@@ -1,0 +1,52 @@
+///
+/// Stellar by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Nav-Mobile */
+
+#nav-mobile {
+    display: none;
+    @include vendor('transition', (
+        'background-color #{_duration(transition)} ease',
+        'border-top-left-radius #{_duration(transition)} ease',
+        'border-top-right-radius #{_duration(transition)} ease',
+        'padding #{_duration(transition)} ease',
+    ));
+    @include color-typography(invert);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: _palette(invert, bg-alt);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    cursor: default;
+    text-align: center;
+    z-index: _misc(z-index-base);
+
+    & + #main {
+        padding-top: 4.25em;
+    }
+
+    #burger-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .burger-line {
+        width: 2.7em;
+        height: 7px;
+        border-radius: 2px;
+        background-color: _palette(bg);
+        margin: 0.2em;
+    }
+
+    @include breakpoint(small) {
+        display: block;
+    }
+}

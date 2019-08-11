@@ -5,12 +5,16 @@ import Waypoint from 'react-waypoint'
 import Layout from '../components/layout'
 import HeaderAdmissions from '../components/HeaderAdmissions'
 import pic02 from '../assets/images/pic02.jpg'
+import Sidebar from '../components/Sidebar';
+import NavMobile from '../components/NavMobile';
+import Backdrop from '../components/Backdrop';
 
 class Admissions extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      stickyNav: false
+      stickyNav: false,
+      sidebarState: 'closed'
     }
   }
 
@@ -20,6 +24,18 @@ class Admissions extends React.Component {
 
   _handleWaypointLeave = () => {
     this.setState(() => ({ stickyNav: true }));
+  }
+
+  _closeSidebar = () => {
+    this.setState(() => ({ 
+      sidebarState: 'closed'
+    }))
+  }
+  
+  _openSidebar = () => {
+    this.setState(() => ({ 
+      sidebarState: 'open'
+    }))
   }
 
   render() {
@@ -34,7 +50,18 @@ class Admissions extends React.Component {
           onLeave={this._handleWaypointLeave}
         >
         </Waypoint>
-        
+
+        <NavMobile
+          open={this._openSidebar}
+        />
+
+        <Sidebar status={this.state.sidebarState}/>
+
+        <Backdrop
+          close={this._closeSidebar}
+          status={this.state.sidebarState}
+        />
+
         <Nav sticky={this.state.stickyNav} />
 
         <div id="main">
