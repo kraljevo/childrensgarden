@@ -125,4 +125,13 @@
 			border-radius: 5px;
 			box-shadow: none;
 		}
+		
+        .down-arrow {
+            display: inline-block;
+            color: _palette(bg);
+            font-weight: bold;
+            font-size: 0.8em;
+            transform: scaleX(1.25);
+            padding-left: 10px;
+		}
 	}

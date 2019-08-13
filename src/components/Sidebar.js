@@ -14,7 +14,7 @@ const Sidebar = (props) => (
                 <Link to="/staff" activeClassName="is-active">Staff</Link>
             </li>
             <li className="dropdown">
-                <Link>Programs</Link>
+                <Link>Programs <span className="down-arrow">▼</span></Link>
                 <div class="dropdown-content">
                     <Link to="/programs/primary" activeClassName="is-active">Primary Class</Link>
                     <Link to="/programs/enrichment" activeClassName="is-active">Enrichment</Link>

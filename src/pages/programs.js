@@ -1,7 +1,7 @@
 import React from 'react'
 import Nav from '../components/Nav.js'
 import Waypoint from 'react-waypoint'
-import HeaderPrograms from '../components/HeaderPrograms'
+import HeaderAlt from '../components/HeaderAlt'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -43,7 +43,7 @@ class Programs extends React.Component {
     return (
       <Layout>
 
-        <HeaderPrograms />
+        <HeaderAlt />
 
         <Waypoint
           onEnter={this._handleWaypointEnter}
@@ -64,12 +64,22 @@ class Programs extends React.Component {
 
         <Nav sticky={this.state.stickyNav} />
 
-        <div id="main">
+        <div className="spotlight" id="main">
           <section id="content" className="main">
-            <h2>Select a program to learn more.</h2>
-            <Link to="/programs/primary" activeClassName="is-active">Primary Class</Link><br />
-            <Link to="/programs/enrichment" activeClassName="is-active">Enrichment</Link><br />
-            <Link to="/programs/summer" activeClassName="is-active">Summer Program</Link>
+            <header className="major">
+              <h2>Select a program to learn more</h2>
+            </header>
+            <ul className="actions">
+              <li>
+                <Link to="/programs/primary" className="button special">Primary Class</Link><br />
+              </li>
+              <li>
+                <Link to="/programs/enrichment" className="button special">Enrichment</Link><br />
+              </li>
+              <li>
+                <Link to="/programs/summer" className="button special">Summer Program</Link>
+              </li>
+            </ul>
           </section>
         </div>
 

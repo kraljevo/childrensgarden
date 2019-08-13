@@ -3,7 +3,7 @@ import Nav from '../components/Nav.js'
 import Waypoint from 'react-waypoint'
 
 import Layout from '../components/layout'
-import HeaderContact from '../components/HeaderContact'
+import HeaderAlt from '../components/HeaderAlt'
 import pic04 from '../assets/images/pic04.jpg'
 import Sidebar from '../components/Sidebar';
 import NavMobile from '../components/NavMobile';
@@ -43,7 +43,7 @@ class Contact extends React.Component {
     return (
       <Layout>
 
-        <HeaderContact />
+        <HeaderAlt />
 
         <Waypoint
           onEnter={this._handleWaypointEnter}
@@ -67,7 +67,10 @@ class Contact extends React.Component {
 
         <div id="main">
           <section id="content" className="main">
-            <span className="image fit"><img src={pic04} alt="" /></span>
+            <header className="major">
+              <h2>Contact Us</h2>
+            </header>
+            <span className="image right"><img src={pic04} alt="" /></span>
             <p>We are located on the Northwest side of Kokomo Indiana. To view a map, click on our address. We look forward to hearing from you.</p>
             <dl className="alt">
                 <dt>Address</dt>

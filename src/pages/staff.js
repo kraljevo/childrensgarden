@@ -3,7 +3,7 @@ import Nav from '../components/Nav.js'
 import Waypoint from 'react-waypoint'
 
 import Layout from '../components/layout'
-import HeaderStaff from '../components/HeaderStaff'
+import HeaderAlt from '../components/HeaderAlt'
 import pic02 from '../assets/images/pic02.jpg'
 import Sidebar from '../components/Sidebar';
 import NavMobile from '../components/NavMobile';
@@ -43,7 +43,7 @@ class Staff extends React.Component {
     return (
       <Layout>
 
-        <HeaderStaff />
+        <HeaderAlt />
 
         <Waypoint
           onEnter={this._handleWaypointEnter}
@@ -67,7 +67,11 @@ class Staff extends React.Component {
 
         <div id="main">
           <section id="content" className="main">
+            <header className="major">
+              <h2>Meet Our Staff</h2>
+            </header>
             <span className="image left"><img src={pic02} alt="" /></span>
+            <h2>Janice L. Harp</h2>
             <p>Janice L. Harp received Montessori training and certification through the Association Montessori Internationale (AMI). Since 1985, Mrs. Harp has directed classes in Georgia, Michigan and Indiana at AMI recognized schools. She is dedicated to creating an atmosphere of calm, order and joy while striving to meet the developmental needs of each child in her class. Mrs. Harp serves as administrator and primary class teacher of the school. She lives in Kokomo with her husband Ray.</p>
           </section>
         </div>

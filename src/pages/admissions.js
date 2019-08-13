@@ -3,7 +3,7 @@ import Nav from '../components/Nav.js'
 import Waypoint from 'react-waypoint'
 
 import Layout from '../components/layout'
-import HeaderAdmissions from '../components/HeaderAdmissions'
+import HeaderAlt from '../components/HeaderAlt'
 import pic02 from '../assets/images/pic02.jpg'
 import Sidebar from '../components/Sidebar';
 import NavMobile from '../components/NavMobile';
@@ -43,7 +43,7 @@ class Admissions extends React.Component {
     return (
       <Layout>
 
-        <HeaderAdmissions />
+        <HeaderAlt />
 
         <Waypoint
           onEnter={this._handleWaypointEnter}
@@ -66,7 +66,10 @@ class Admissions extends React.Component {
 
         <div id="main">
           <section id="content" className="main">
-            <span className="image fit"><img src={pic02} alt="" /></span>
+            <header className="major">
+              <h2>Admissions</h2>
+            </header>
+            <span className="image right"><img src={pic02} alt="" /></span>
             <p>To learn more about the admission process, please contact Janice Harp at <a href="tel: 765-452-1152">(765) 452-1152</a> or via email at <a href="mailto: teacherjan@tcg-kokomo.org">teacherjan@tcg-kokomo.org</a>. She will be happy to take you on a tour of the school, answer any of your questions, and put you in contact with other families in the Children's Garden Montessori School.</p>
             <h2>Steps to Enrollment</h2>
             <ul>
