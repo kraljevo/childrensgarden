@@ -75,7 +75,7 @@ class Index extends React.Component {
             <div className="spotlight">
               <div className="content">
                 <header className="major">
-                  <h2>Welcome to the Children's Garden Montessori School</h2>
+                  <h2>Welcome to The Children's Garden Montessori School</h2>
                 </header>
                 <p>Children of mixed ages and abilities work together in a Montessori class. Each child is treated as an individual, and is offered lessons that build on their interests, and fit their developmental needs.</p>
                 <ul className="actions">

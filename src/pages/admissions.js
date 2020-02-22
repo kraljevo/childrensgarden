@@ -70,7 +70,7 @@ class Admissions extends React.Component {
               <h2>Admissions</h2>
             </header>
             <span className="image right"><img src={pic02} alt="" /></span>
-            <p>To learn more about the admission process, please contact Janice Harp at <a href="tel: 765-452-1152">(765) 452-1152</a> or via email at <a href="mailto: teacherjan@tcg-kokomo.org">teacherjan@tcg-kokomo.org</a>. She will be happy to take you on a tour of the school, answer any of your questions, and put you in contact with other families in the Children's Garden Montessori School.</p>
+            <p>To learn more about the admission process, please contact Janice Harp at <a href="tel: 765-452-1152">(765) 452-1152</a> or via email at <a href="mailto: teacherjan@tcg-kokomo.org">teacherjan@tcg-kokomo.org</a>. She will be happy to take you on a tour of the school, answer any of your questions, and put you in contact with other families at the Children's Garden Montessori School.</p>
             <h2>Steps to Enrollment</h2>
             <ul>
               <li>Set up a tour</li>
